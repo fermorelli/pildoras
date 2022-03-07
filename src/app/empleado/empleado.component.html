@@ -1,0 +1,27 @@
+<span>Esto es un Empleado:</span>
+
+<p>Nombre del empleado: {{nombre}}</p>
+<p>Apellido del empleado: {{apellido}}</p>
+<p>Edad del empleado: {{edad}}</p>
+<p>Empresa del empleado: {{empresa}}</p>
+
+<!--span>Introduce la empresa:</!--span>
+<input type="text" #empresa (keyup)="0" [disabled]="habCuadro"-->  
+
+<span>Introduce la empresa:</span>
+<input type="text" [(ngModel)]="empresa">
+
+<br>
+<br>
+<span>{{regText}}</span>
+<br>
+<br>
+<span>Registrado:</span>
+<input type="radio" value="si" name="regUser" id="registro" [checked]="regUser" (click)="setRegUser($event)">
+<br>
+<br>
+<span>No registrado:</span>
+<input type="radio" value="no" name="regUser" id="registro" (click)="setRegUser($event)">
+
+ 
+{{getRegUser()}}
